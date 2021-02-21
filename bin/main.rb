@@ -2,16 +2,8 @@
 
 # rubocop:disable Metrics/AbcSize, Metrics/MethodLength, Metrics/CyclomaticComplexity, Metrics/PerceivedComplexity
 
-require_relative '../lib/tic_tac_toe/player'
-require_relative '../lib/tic_tac_toe/winner'
-
-# Use getters to collect input from players
-puts "Let's play tic-tac-toe!"
-puts 'Enter your name player one'
-name = gets.chomp
-player_one = name
-puts "Welcome #{player_one}, select either 'X' or 'O' as your marker"
-marker = gets.chomp.upcase
+require_relative '../lib/player'
+require_relative '../lib/winner'
 
 # Validate input from the players
 def validate_marker(player_one, marker)
@@ -22,30 +14,10 @@ def validate_marker(player_one, marker)
   true
 end
 
-while validate_marker(player_one, marker) == false
-  puts "Oops! Wrong input. Select either 'X' or 'O' as your marker"
-  marker = gets.chomp.upcase
-end
-
-# Create Player 1 object
-player1_obj = Player.new(player_one, marker, Array.new(9, 0))
-
 def change_marker(marker)
   other_marker = %w[X O].reject { |ch| ch == marker }
   other_marker[0]
 end
-
-puts 'Enter your name player two'
-name = gets.chomp
-player_two = name
-
-# Create Player 2 object
-player2_obj = Player.new(player_two, change_marker(marker), Array.new(9, 0))
-
-puts "Welcome #{player2_obj.name}, your marker is #{player2_obj.marker}"
-
-puts 'Remember: The player with a row, column or diagonal of the same marker wins'
-puts "Ready? Let's begin!"
 
 # Define the board layout
 def board(moved_cells = %w[1 2 3 4 5 6 7 8 9])
@@ -62,6 +34,7 @@ def board(moved_cells = %w[1 2 3 4 5 6 7 8 9])
 end
 
 # rubocop:disable Lint/LiteralInInterpolation
+
 # Add the banner
 def game_banner
   puts <<-GRID
@@ -161,6 +134,41 @@ def position_available(marker_pos, player1_obj, player2_obj)
 
   false
 end
+
+
+=begin
+*******************************
+TIC TAC TOE PROGRAM BEGINS HERE:
+*******************************
+=end
+
+# Use getters to collect input from players
+puts "Let's play tic-tac-toe!"
+puts 'Enter your name player one'
+name = gets.chomp
+player_one = name
+puts "Welcome #{player_one}, select either 'X' or 'O' as your marker"
+marker = gets.chomp.upcase
+
+while validate_marker(player_one, marker) == false
+  puts "Oops! Wrong input. Select either 'X' or 'O' as your marker"
+  marker = gets.chomp.upcase
+end
+
+# Create Player 1 object
+player1_obj = Player.new(player_one, marker)
+
+puts 'Enter your name player two'
+name = gets.chomp
+player_two = name
+
+# Create Player 2 object
+player2_obj = Player.new(player_two, change_marker(marker))
+
+puts "Welcome #{player2_obj.name}, your marker is #{player2_obj.marker}"
+
+puts 'Remember: The player with a row, column or diagonal of the same marker wins'
+puts "Ready? Let's begin!"
 
 accept_moves(player1_obj, player2_obj)
 game_banner # BANNER - to show ASCII TIC TAC TOE
