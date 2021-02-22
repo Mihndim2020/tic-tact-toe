@@ -53,18 +53,14 @@ end
 
 def accept_moves(player_one, player_two)
   cells = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-  moves_done = 1
   game_banner # BANNER - to show ASCII TIC TAC TOE
   board(cells)
 
-  check = FindWinner.new
-  game_in_play = true
-
-  while cells.any? { |n| n.is_a? Integer } && game_in_play
+  check = Winner.new
+  while cells.any? { |n| n.is_a? Integer }
 
     # Checks if other player made a winning move
     if check.game_over? player_two.moves_arr
-      game_in_play = false
       puts "Brilliant! #{player_two.name} wins!!"
       break
     end
@@ -86,7 +82,6 @@ def accept_moves(player_one, player_two)
 
     # Checks if previous player made a winning move
     if check.game_over? player_one.moves_arr
-      game_in_play = false
       puts "Brilliant! #{player_one.name} wins!!"
       break
     end
@@ -107,10 +102,6 @@ def accept_moves(player_one, player_two)
 
       board(cells)
     end
-
-    break if moves_done > 8 == true
-
-    moves_done += 1
   end
 
   puts "It's a Tie. Play again?" unless check.game_over? player_one.moves_arr or check.game_over? player_two.moves_arr
