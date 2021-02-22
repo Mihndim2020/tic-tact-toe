@@ -3,8 +3,8 @@ require '../lib/player'
 
 describe Player do
   describe 'Player.new' do
-    marker = %(X O)
-    let(player_1) { Player.new('player 1', marker[rand(2)], Array.new(9, 0)) }
+    marker = %w[X O]
+    let(:player_1) { Player.new('player 1', marker[rand(2)], Array.new(9, 0)) }
 
     it "players 1 chooses 'Name' of atleast 1 letter " do
       expect(player_1.name.length).to be > 0
