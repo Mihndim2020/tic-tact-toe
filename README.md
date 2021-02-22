@@ -14,15 +14,20 @@
         #     #  ##         #    #  #  ##         #    ##  ## #
        ###   ###  ####     ###   #####  ####     ###    ####   ####
 ```
+
 ## DESCRIPTION & HOW TO START PLAYING
+
 ### Start cmd on windows / terminal on mac or linux
+
 - Type below commands to launch the game
-    - Start a new Terminal [CMD from Run/Search on Windows]
-    - Go to the game directory: cd [tic-tac-toe]
-    - Type: $user-1@[...] cd [bin] &  Enter [.\main.rb]
-    - Hit Enter/Return & continue...
+  - Start a new Terminal [CMD from Run/Search on Windows]
+  - Go to the game directory: cd [tic-tac-toe]
+  - Type: $user-1@[...] cd [bin] & Enter [.\main.rb]
+  - Hit Enter/Return & continue...
 - main.rb - the entry point file is a command line executable
+
 # GAME PLAY - Instructions
+
 - start cmd on windows / terminal on mac or linux
 - type ./main.rb & enter
 - The first player enters a name and selects either 'X' or 'O'
@@ -48,16 +53,20 @@
 - Version Control, Git Flow
 - Application of RUBY Syntax & Programming elements.
 - User I/P & O/P via terminal / command line validation and control
+
 ## Authors
 
-:silhouette: **Shabbir**
+🧑‍💻 **Shabbir**
+
 - GitHub: [@smy5152](https://github.com/smy5152)
 - Twitter: [@smy5152](https://twitter.com/smy5152)
 - LinkedIn: [Shabbir Yamani](https://www.linkedin.com/in/shabbirmyamani/)
 
-👤 **Ubong George**
-- GitHub: [@george-swift](https://github.com/george-swift)
-- Twitter: [@\_\_pragmaticdev](https://twitter.com/__pragmaticdev)
+🧑‍💻 **Sunil Kumar**
+
+- GitHub: [@DsunilK](https://github.com/DsunilK)
+- Linkedin: [@DsunilK](https://www.linkedin.com/in/dsunilk/)
+- Twiter: [@DsunilK](https://twitter.com/D_sunil_K)
 
 ## Show your support
 
