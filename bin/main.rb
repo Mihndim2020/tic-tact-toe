@@ -6,11 +6,6 @@ require_relative '../lib/player'
 require_relative '../lib/winner'
 require_relative '../lib/functions'
 
-def change_marker(marker)
-  other_marker = %w[X O].reject { |ch| ch == marker }
-  other_marker[0]
-end
-
 # Define the board layout
 def board(moved_cells = %w[1 2 3 4 5 6 7 8 9])
   cells = moved_cells
