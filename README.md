@@ -50,14 +50,17 @@
 - User I/P & O/P via terminal / command line validation and control
 ## Authors
 
-:silhouette: **Shabbir**
+🧑‍💻 **Shabbir**
+
 - GitHub: [@smy5152](https://github.com/smy5152)
 - Twitter: [@smy5152](https://twitter.com/smy5152)
 - LinkedIn: [Shabbir Yamani](https://www.linkedin.com/in/shabbirmyamani/)
 
-👤 **Ubong George**
-- GitHub: [@george-swift](https://github.com/george-swift)
-- Twitter: [@\_\_pragmaticdev](https://twitter.com/__pragmaticdev)
+🧑‍💻 **Sunil Kumar**
+
+- GitHub: [@DsunilK](https://github.com/DsunilK)
+- Linkedin: [@DsunilK](https://www.linkedin.com/in/dsunilk/)
+- Twiter: [@DsunilK](https://twitter.com/D_sunil_K)
 
 ## Show your support
 
