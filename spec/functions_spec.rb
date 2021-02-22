@@ -1,6 +1,6 @@
 # spec/functions_spec.rb
-require '../lib/player'
-require '../lib/functions'
+require_relative '../lib/player'
+require_relative '../lib/functions'
 
 describe 'functions - validations of public methods' do
   describe '#change_marker - return a valid marker' do
@@ -15,19 +15,19 @@ describe 'functions - validations of public methods' do
 
   describe '#validate_marker - entered a valid marker' do
     marker1 = %w[X O]
-    let(:player_1) { Player.new('player 1', marker1[rand(2)], Array.new(9, 0)) }
+    let(:player_one) { Player.new('player 1', marker1[rand(2)], Array.new(9, 0)) }
 
     it "players 1 chooses 'X' or 'O' " do
-      expect(validate_marker(player_1, player_1.marker)).to be true
+      expect(validate_marker(player_one, player_one.marker)).to be true
     end
   end
 
   describe '#validate_marker - entered invalid marker' do
     marker2 = %w[Y Z]
-    let(:player_2) { Player.new('player 1', marker2[rand(2)], Array.new(9, 0)) }
+    let(:player_two) { Player.new('player 1', marker2[rand(2)], Array.new(9, 0)) }
 
     it "players enter Marker other than 'X' or 'O' " do
-      expect(validate_marker(player_2, player_2.marker)).to be false
+      expect(validate_marker(player_two, player_two.marker)).to be false
     end
   end
 end

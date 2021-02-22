@@ -15,6 +15,13 @@
        ###   ###  ####     ###   #####  ####     ###    ####   ####
 ```
 
+### GAMEPLAY - INTRODUCTION
+![screenshot](screenshot-intro.png)
+### GAMEPLAY - WINNER
+![screenshot](screenshot-2.png)
+### RSPEC
+![screenshot](screenshot-2.png)
+
 ## DESCRIPTION & HOW TO START PLAYING
 
 ### Start cmd on windows / terminal on mac or linux
@@ -50,7 +57,7 @@
 
 ## Learning Goals:
 
-- Version Control, Git Flow
+- Version Control, Git Flow, RSpec Tests
 - Application of RUBY Syntax & Programming elements.
 - User I/P & O/P via terminal / command line validation and control
 

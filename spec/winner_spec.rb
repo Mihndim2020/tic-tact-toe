@@ -1,5 +1,5 @@
 # spec/player_spec.rb
-require '../lib/winner'
+require_relative '../lib/winner'
 
 describe Winner do
   describe '#game_over' do
