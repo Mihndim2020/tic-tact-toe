@@ -18,23 +18,6 @@ def board(moved_cells = %w[1 2 3 4 5 6 7 8 9])
   GRID
 end
 
-# rubocop:disable Lint/LiteralInInterpolation
-# Add the banner
-def game_banner
-  puts <<-GRID
-
-        #######             #######               ########{'              '}
-          #                   #                     ##{'                 '}
-          #                   #                     ##{'                 '}
-          #    ##   ####      #    ####   ####      #     ####   ####{'  '}
-          #     #  #   #      #       #  #   #      #    ##  ## #   ##{' '}
-          #     #  #          #    ####  #          #    #    # ######{' '}
-          #     #  ##         #    #  #  ##         #    ##  ## ##{'     '}
-         ###   ###  ####     ###   #####  ####     ###    ####   ####
-  GRID
-end
-# rubocop:enable Lint/LiteralInInterpolation
-
 def board_is_full(cells)
   return true if cells.count { |x| x.is_a? Integer }.zero?
 
@@ -85,7 +68,6 @@ puts 'Remember: The player with a row, column or diagonal of the same marker win
 puts "Ready? Let's begin!"
 
 cells = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-game_banner # BANNER - to show ASCII TIC TAC TOE
 board(cells)
 
 check = Winner.new
@@ -137,5 +119,3 @@ end
 
 puts "It's a Tie. Play again?" unless
   check.game_over? obj_player_one.moves_arr or check.game_over? obj_player_two.moves_arr
-
-game_banner # BANNER - to show ASCII TIC TAC TOE
