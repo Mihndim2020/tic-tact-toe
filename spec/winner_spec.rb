@@ -1,7 +1,5 @@
-#spec/player_spec.rb
-# frozen_string_literal: true
-
-require '../lib/winner.rb'
+# spec/player_spec.rb
+require '../lib/winner'
 
 describe Winner do
   describe '#game_over' do
@@ -19,11 +17,9 @@ describe Winner do
       win = Winner.new
       p1_arr = [1, 0, 1, 0, 0, 1, 1, 1, 0]
       p2_arr = [0, 1, 0, 1, 1, 0, 0, 0, 1]
-      
-      expect(win.game_over?(p1_arr)).to be false 
-      expect(win.game_over?(p2_arr)).to be false
-      
-    end
 
+      expect(win.game_over?(p1_arr)).to be false
+      expect(win.game_over?(p2_arr)).to be false
+    end
   end
 end
