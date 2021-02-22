@@ -8,7 +8,6 @@ describe Player do
 
     it "players 1 chooses 'Name' of atleast 1 letter " do
       expect(player_one.name.length).to be.positive?
-      expect(player_one.name.length).not_to be.negative?
     end
 
     it "players 1 chooses 'X' or 'O' " do

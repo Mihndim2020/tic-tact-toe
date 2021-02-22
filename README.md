@@ -20,7 +20,7 @@
 ### GAMEPLAY - WINNER
 ![screenshot](screenshot-2.png)
 ### RSPEC
-![screenshot](screenshot-2.png)
+![screenshot](spec-1.png)
 
 ## DESCRIPTION & HOW TO START PLAYING
 
