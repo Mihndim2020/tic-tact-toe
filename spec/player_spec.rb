@@ -1,4 +1,5 @@
 # spec/player_spec.rb
+# rubocop:disable Style/NumericPredicate
 require_relative '../lib/player'
 
 describe Player do
@@ -26,3 +27,4 @@ describe Player do
     end
   end
 end
+# rubocop:enable Style/NumericPredicate
