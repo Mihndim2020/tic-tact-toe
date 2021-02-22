@@ -2,7 +2,17 @@
 require '../lib/player'
 require '../lib/functions'
 
-describe '#functions' do
+describe 'functions - validations of public methods' do
+  describe '#change_marker - return a valid marker' do
+    it "player 1 chooses 'X' - so return 'O' " do
+      expect(change_marker('X')).to eq('O')
+    end
+    
+    it "player 1 chooses 'O' - so return 'X' " do
+      expect(change_marker('O')).to eq('X')
+    end
+  end
+  
   describe '#validate_marker - entered a valid marker' do
     marker1 = %w[X O]
     let(:player_1) { Player.new('player 1', marker1[rand(2)], Array.new(9, 0)) }
