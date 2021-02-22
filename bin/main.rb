@@ -86,22 +86,22 @@ def accept_moves(player_one, player_two)
       break
     end
 
-    unless board_is_full(cells)
-      puts 'Select a number from the GRID to make your move.'
-      puts "#{player_two.name}'s Turn : "
+    next if board_is_full(cells)
+
+    puts 'Select a number from the GRID to make your move.'
+    puts "#{player_two.name}'s Turn : "
+    marker_pos = gets.chomp.to_i - 1
+    while position_available(marker_pos, player_one, player_two) == false
+      puts 'Oops! Invalid input. Try Again.'
       marker_pos = gets.chomp.to_i - 1
-      while position_available(marker_pos, player_one, player_two) == false
-        puts 'Oops! Invalid input. Try Again.'
-        marker_pos = gets.chomp.to_i - 1
-      end
-      # Holds player two's move
-      player_two.moves_arr[marker_pos] = 1
-
-      # Sends player marker to DISPLAY GRID
-      cells[marker_pos] = player_two.marker
-
-      board(cells)
     end
+    # Holds player two's move
+    player_two.moves_arr[marker_pos] = 1
+
+    # Sends player marker to DISPLAY GRID
+    cells[marker_pos] = player_two.marker
+
+    board(cells)
   end
 
   puts "It's a Tie. Play again?" unless check.game_over? player_one.moves_arr or check.game_over? player_two.moves_arr
@@ -126,12 +126,9 @@ def position_available(marker_pos, player1_obj, player2_obj)
   false
 end
 
-
-=begin
-*******************************
-TIC TAC TOE PROGRAM BEGINS HERE:
-*******************************
-=end
+# *******************************
+# TIC TAC TOE PROGRAM BEGINS HERE
+# *******************************
 
 # Use getters to collect input from players
 puts "Let's play tic-tac-toe!"
