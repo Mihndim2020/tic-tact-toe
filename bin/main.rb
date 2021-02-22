@@ -25,6 +25,7 @@ def board(moved_cells = %w[1 2 3 4 5 6 7 8 9])
   GRID
 end
 
+# rubocop:disable Lint/LiteralInInterpolation
 # Add the banner
 def game_banner
   puts <<-GRID
@@ -39,6 +40,7 @@ def game_banner
          ###   ###  ####     ###   #####  ####     ###    ####   ####
   GRID
 end
+# rubocop:enable Lint/LiteralInInterpolation
 
 def accept_moves(player_one, player_two)
   cells = [1, 2, 3, 4, 5, 6, 7, 8, 9]
