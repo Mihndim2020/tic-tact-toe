@@ -4,6 +4,22 @@ require_relative '../lib/player'
 require_relative '../lib/winner'
 require_relative '../lib/functions'
 
+# rubocop:disable Lint/LiteralInInterpolation
+# Add the banner
+def game_banner
+  puts <<-GRID
+        #######             #######               ########{'              '}
+          #                   #                     ##{'                 '}
+          #                   #                     ##{'                 '}
+          #    ##   ####      #    ####   ####      #     ####   ####{'  '}
+          #     #  #   #      #       #  #   #      #    ##  ## #   ##{' '}
+          #     #  #          #    ####  #          #    #    # ######{' '}
+          #     #  ##         #    #  #  ##         #    ##  ## ##{'     '}
+         ###   ###  ####     ###   #####  ####     ###    ####   ####
+  GRID
+end
+# rubocop:enable Lint/LiteralInInterpolation
+
 # Define the board layout
 def board(moved_cells = %w[1 2 3 4 5 6 7 8 9])
   cells = moved_cells
@@ -40,7 +56,7 @@ end
 # *******************************
 # TIC TAC TOE PROGRAM BEGINS HERE
 # *******************************
-
+game_banner
 # Use getters to collect input from players
 puts "Let's play tic-tac-toe!"
 puts 'Enter your name player one'
@@ -119,3 +135,4 @@ end
 
 puts "It's a Tie. Play again?" unless
   check.game_over? obj_player_one.moves_arr or check.game_over? obj_player_two.moves_arr
+game_banner
