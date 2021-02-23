@@ -14,15 +14,27 @@
         #     #  ##         #    #  #  ##         #    ##  ## #
        ###   ###  ####     ###   #####  ####     ###    ####   ####
 ```
+
+### GAMEPLAY - INTRODUCTION
+![screenshot](screenshot-intro.png)
+### GAMEPLAY - WINNER
+![screenshot](screenshot-2.png)
+### RSPEC
+![screenshot](spec-1.png)
+
 ## DESCRIPTION & HOW TO START PLAYING
+
 ### Start cmd on windows / terminal on mac or linux
+
 - Type below commands to launch the game
-    - Start a new Terminal [CMD from Run/Search on Windows]
-    - Go to the game directory: cd [tic-tac-toe]
-    - Type: $user-1@[...] cd [bin] &  Enter [.\main.rb]
-    - Hit Enter/Return & continue...
+  - Start a new Terminal [CMD from Run/Search on Windows]
+  - Go to the game directory: cd [tic-tac-toe]
+  - Type: $user-1@[...] cd [bin] & Enter [.\main.rb]
+  - Hit Enter/Return & continue...
 - main.rb - the entry point file is a command line executable
+
 # GAME PLAY - Instructions
+
 - start cmd on windows / terminal on mac or linux
 - type ./main.rb & enter
 - The first player enters a name and selects either 'X' or 'O'
@@ -45,9 +57,10 @@
 
 ## Learning Goals:
 
-- Version Control, Git Flow
+- Version Control, Git Flow, RSpec Tests
 - Application of RUBY Syntax & Programming elements.
 - User I/P & O/P via terminal / command line validation and control
+
 ## Authors
 
 🧑‍💻 **Shabbir**
