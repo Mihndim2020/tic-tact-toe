@@ -68,7 +68,7 @@
 - Twitter: [@smy5152](https://twitter.com/smy5152)
 - LinkedIn: [Shabbir Yamani](https://www.linkedin.com/in/shabbirmyamani/)
 
-👤 **Ubong George**
+🧑‍💻 **Ubong George**
 - GitHub: [@george-swift](https://github.com/george-swift)
 - Twitter: [@\_\_pragmaticdev](https://twitter.com/__pragmaticdev)
 
